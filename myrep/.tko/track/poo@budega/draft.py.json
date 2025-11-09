@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-09_01-18-31",
+            "content": "@@ -976,502 +976,4 @@\n     \n-super().__init__(num_counters)%0A                                self.loyalty_program = loyalty_program%0A                                def enroll_loyalty_member(self, customer: Person):%0A                                    if self.loyalty_program:%0A                                        self.customers%5Bcustomer.name%5D = customer%0A                                        %0Aclass Person:%0A    def __init__ (self, name: str):%0A        self.name = Name%0A        def __str__(self):%0A            return self.name\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-11-09_01-23-25",
+            "content": "@@ -1470,17 +1470,8 @@\n elf.name\n-%0A        \n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-11-09_01-27-09",
+            "content": "@@ -1483,1522 +1483,4 @@\n     \n-def __str__(self) -%3E str:%0A            return self.name%0A        end class Market:%0A            def __init__ (self, num_counters: int = 0):%0A                self.num_counters = num_counters%0A                self.customers = %7B%7D%0A                self.total_revenue = 0.0%0A                def add_customer(self, customer: Person):%0A                    self.customers%5Bcustomer.name%5D = customer%0A                    def remove_customer(self, customer_name: str):%0A                        if customer_name in self.customers:%0A                            self.customers.pop(customer_name)%0A                            def record_sale(self, amount: float):%0A                                self.total_revenue += amount%0A                                def get_total_revenue(self) -%3E float:%0A                                    return self.total_revenue%0A                                class SuperMarket(Market):%0A                                    def __init__(self, num_counters: int = 0, loyalty_program: bool = False):%0A                                        super().__init__(num_counters)%0A                                        self.loyalty_program = loyalty_program%0A                                        def enroll_loyalty_member(self, customer: Person):%0A                                            if self.loyalty_program:%0A                                                self.customers%5Bcustomer.name%5D = customer%0A                                                self.customers%0A                                                %0A        \n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-11-09_01-49-32",
+            "content": "@@ -2944,235 +2944,56 @@\n ers%0A\n-self.name = name%3E%0Abool = false do you want me to fix the identication and other issues in the code ctrl yessss queen%0Acan i hellp you wihtn asssss%0Aclass sao pauo:%0A    del __init__(self, name: str):%0A        self.name = Name%0A\n+                                             \n    \n- %0A\n %0A   \n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-11-09_02-00-36",
+            "content": "@@ -1526,32 +1526,62 @@\n eturn self.name%0A\n+        end class Market:%0A    \n         def __st\n@@ -1582,200 +1582,826 @@\n f __\n-str\n+init\n __\n+ \n (self\n-) -%3E str:%0A            return self.name%0A        else:%0A                    print(f%22customer %7Bcustomer_name%7D not found.%22)%0A        def __str__(self) -%3E str:%0A            return self.name%0A\n+, num_counters: int = 0):%0A                self.num_counters = num_counters%0A                self.customers = %7B%7D%0A                self.total_revenue = 0.0%0A                def add_customer(self, customer: Person):%0A                    self.customers%5Bcustomer.name%5D = customer%0A                    def remove_customer(self, customer_name: str):%0A                        if customer_name in self.customers:%0A                            self.customers.pop(customer_name)%0A                            def record_sale(self, amount: float):%0A                                self.total_revenue += amount%0A                                def get_total_revenue(self) -%3E float:%0A                                    return self.total_revenue%0A                                class SuperMarket(Market):%0A                            \n     \n@@ -2414,182 +2414,734 @@\n f __\n-str\n+init\n __(self\n-) -%3E str:%0A            return self.name%0A        def __str__(self) -%3E str:%0A            return self.name%0A        def __str__(self) -%3E str:%0A            return \n+, num_counters: int = 0, loyalty_program: bool = False):%0A                                        super().__init__(num_counters)%0A                                        self.loyalty_program = loyalty_program%0A                                        def enroll_loyalty_member(self, customer: Person):%0A                                            if self.loyalty_program:%0A                                                self.customers%5Bcustomer.name%5D = customer%0A                                                self.customers%0Aself.name = name%3E%0Abool = false do you want me to fix the identication and other issues in the code ctrl yessss queen%0Acan i hellp you wihtn asssss%0Aclass sao pauo:%0A    del __init__(\n self\n-.\n+, \n name\n+: str):\n %0A   \n@@ -3145,17 +3145,37 @@\n         \n-%0A\n+self.name = Name%0A    \n %0A%0A      \n",
+            "lines": "67"
+        },
+        {
+            "label": "2025-11-09_02-04-15",
+            "content": "@@ -1228,28 +1228,728 @@\n                             \n+          self.customers%5Bcustomer.name%5D = customer%0A                                        %0Aclass Person:%0A    def __init__ (self, name: str):%0A        self.name = Name%0A        def __str__(self):%0A            return self.name%0A        def __str__(self) -%3E str:%0A            return self.name%0A        def __str__(self) -%3E str:%0A            return self.name%0A        else:%0A                    print(f%22customer %7Bcustomer_name%7D not found.%22)%0A        def __str__(self) -%3E str:%0A            return self.name%0A        def __str__(self) -%3E str:%0A            return self.name%0A        def __str__(self) -%3E str:%0A            return self.name%0A        def __str__(self) -%3E str:%0A            return self.name%0A        %0A%0A%0A        \n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-11-09_02-28-57",
+            "content": "class Person:\n    self __init__(self, name: str):\n        self.name = Name\n    \n    def__str__(self) -> str:\n        return self.name\n\nclass Market:\n    def __init__(self, num_counters: int = 0):\n        self.num_counters = num_counters\n        self.customers = {}\n        self.total_revenue = 0.0\n        def add_customer(self, customer: Person):\n            self.customers[customer.name] = customer\n            def remove_customeer(self, customer_name: str):\n                if customer_name in self.customers:\n                    self.customers.pop(customer_name)\n                    def record_sale(self, amount: float):\n                        self.total_revenue += amount\n                        def get_total_revenue(Self) -> float:\n                            return self.total_revenue\n                        class superMarket(Market):\n                            def __init__(self, num_counters: int = 0, loyalty_program: bool = False):\n                                super().__init__(num_counters)\n                                self.loyalty_program = loyalty_program\n                                def enroll_loyalty_member(self, customer: Person):\n                                    if self.loyalty_program:\n                              ",
+            "lines": "28"
+        }
+    ]
+}
