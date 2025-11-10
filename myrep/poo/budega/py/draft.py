@@ -22,6 +22,29 @@ class Market:
         espera = [ p.name for p in self.waiting ]
         return f"Caixas: [{', '.join(caixas)}]\nEspera: [{', '.join(espera)}]"
 
+    def call(self, index: int):
+        # call next waiting person to counter index
+        if index < 0 or index >= self.num_counters:
+            return 'fail: caixa inexistente'
+        if not self.waiting:
+            return 'fail: sem clientes'
+        if self.counters[index] is not None:
+            return 'fail: caixa ocupado'
+        # move first waiting to counter
+        person = self.waiting.pop(0)
+        self.counters[index] = person
+        return None
+
+    def finish(self, index: int):
+        # finish service at counter index
+        if index < 0 or index >= self.num_counters:
+            return 'fail: caixa inexistente'
+        if self.counters[index] is None:
+            return 'fail: caixa vazio'
+        person = self.counters[index]
+        self.counters[index] = None
+        return person
+
 
 def main():
     import sys
@@ -58,11 +81,33 @@ def main():
                     name = parts[1]
                     person = Person(name)
                     market.waiting.append(person)
+        elif cmd == 'call':
+            if market is None:
+                print('fail: mercado nao inicializado')
+            else:
+                if len(parts) < 2 or not parts[1].isdigit():
+                    print('fail: caixa inexistente')
+                else:
+                    idx = int(parts[1])
+                    res = market.call(idx)
+                    if isinstance(res, str):
+                        print(res)
+        elif cmd == 'finish':
+            if market is None:
+                print('fail: mercado nao inicializado')
+            else:
+                if len(parts) < 2 or not parts[1].isdigit():
+                    print('fail: caixa inexistente')
+                else:
+                    idx = int(parts[1])
+                    res = market.finish(idx)
+                    if isinstance(res, str):
+                        print(res)
         else:
-            # ignore other commands for now (not needed for first test)
+            # ignore other commands for now
             continue
 
 
 if __name__ == '__main__':
     main()
-   
+

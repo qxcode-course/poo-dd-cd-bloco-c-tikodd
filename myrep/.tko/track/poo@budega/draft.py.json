@@ -72,8 +72,73 @@
         },
         {
             "label": "2025-11-10_17-29-35",
-            "content": "class Person:\n    def __init__(self, name: str):\n        self.name = name\n\n    def __str__(self) -> str:\n        return self.name\n\nclass Market:\n    def __init__(self, num_counters: int = 0):\n        self.num_counters = num_counters\n        # counters: list of Person or None\n        self.counters = [None for _ in range(num_counters)]\n        # waiting queue: list of Person\n        self.waiting = []\n        # keep legacy fields if needed later\n        self.customers = {}\n        self.total_revenue = 0.0\n\n    def __str__(self) -> str:\n        # Represent counters: '-----' if None, otherwise person's name\n        caixas = [ (c.name if c is not None else '-----') for c in self.counters ]\n        espera = [ p.name for p in self.waiting ]\n        return f\"Caixas: [{', '.join(caixas)}]\\nEspera: [{', '.join(espera)}]\"\n\n\ndef main():\n    import sys\n    market = None\n    for line in sys.stdin:\n        line = line.strip()\n        if not line:\n            continue\n        # echo command with $\n        print(f\"${line}\")\n        parts = line.split()\n        cmd = parts[0]\n        if cmd == 'end':\n            break\n        if cmd == 'init':\n            # minimal: create market with given number of counters\n            if len(parts) >= 2 and parts[1].isdigit():\n                n = int(parts[1])\n                market = Market(n)\n            else:\n                print('fail: argumento invalido')\n        elif cmd == 'show':\n            if market is None:\n                print('fail: mercado nao inicializado')\n            else:\n                print(market)\n        elif cmd == 'arrive':\n            if market is None:\n                print('fail: mercado nao inicializado')\n            else:\n                if len(parts) < 2:\n                    print('fail: nome ausente')\n                else:\n                    name = parts[1]\n                    person = Person(name)\n                    market.waiting.append(person)\n        else:\n            # ignore other commands for now (not needed for first test)\n            continue\n\n\nif __name__ == '__main__':\n    main()\n   ",
+            "content": "@@ -2076,62 +2076,8 @@\n in()\n-%0A%0A    def test():%0A        market = Market(3)%0A        e\n %0A   \n",
             "lines": "68"
+        },
+        {
+            "label": "2025-11-10_17-57-04",
+            "content": "@@ -2093,18 +2093,8 @@\n t():\n-aaafaasasd\n %0A   \n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-11-10_17-58-41",
+            "content": "@@ -2104,24 +2104,8 @@\n asd%0A\n-    asdaad%0A    %0A\n     \n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-11-10_17-58-42",
+            "content": "@@ -2085,12 +2085,79 @@\n  def test():\n+aaafaasasd%0A    asdaad%0A    %0A        market = Market(3)%0A        e%0A   \n",
+            "lines": "74"
+        },
+        {
+            "label": "2025-11-10_17-58-49",
+            "content": "@@ -2074,12 +2074,23 @@\n main()%0A%0A    \n+def test():\n",
+            "lines": "69"
+        },
+        {
+            "label": "2025-11-10_17-58-55",
+            "content": "@@ -2074,8 +2074,12 @@\n main()%0A%0A\n+    \n",
+            "lines": "69"
+        },
+        {
+            "label": "2025-11-10_19-01-40",
+            "content": "@@ -2078,154 +2078,4 @@\n ()%0A%0A\n-def test():%0A    market = Market(3)%0A    assert str(market) == %22Caixas: %5B-----, -----, -----%5D%5CnEspera: %5B%5D%22%0A    market.waiting.append(Person)%0A    return%0A\n",
+            "lines": "68"
+        },
+        {
+            "label": "2025-11-10_19-05-25",
+            "content": "@@ -2074,8 +2074,158 @@\n main()%0A%0A\n+def test():%0A    market = Market(3)%0A    assert str(market) == %22Caixas: %5B-----, -----, -----%5D%5CnEspera: %5B%5D%22%0A    market.waiting.append(Person)%0A    return%0A\n",
+            "lines": "73"
+        },
+        {
+            "label": "2025-11-10_19-06-29",
+            "content": "@@ -2078,29 +2078,4 @@\n ()%0A%0A\n-def __init__():%0A    pass%0A\n",
+            "lines": "68"
+        },
+        {
+            "label": "2025-11-10_19-08-33",
+            "content": "@@ -820,830 +820,8 @@\n %5D%22%0A%0A\n-    def call(self, index: int):%0A        # call next waiting person to counter index%0A        if index %3C 0 or index %3E= self.num_counters:%0A            return 'fail: caixa inexistente'%0A        if not self.waiting:%0A            return 'fail: sem clientes'%0A        if self.counters%5Bindex%5D is not None:%0A            return 'fail: caixa ocupado'%0A        # move first waiting to counter%0A        person = self.waiting.pop(0)%0A        self.counters%5Bindex%5D = person%0A        return None%0A%0A    def finish(self, index: int):%0A        # finish service at counter index%0A        if index %3C 0 or index %3E= self.num_counters:%0A            return 'fail: caixa inexistente'%0A        if self.counters%5Bindex%5D is None:%0A            return 'fail: caixa vazio'%0A        person = self.counters%5Bindex%5D%0A        self.counters%5Bindex%5D = None%0A        return person%0A%0A\n %0Adef\n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-11-10_19-53-51",
+            "content": "@@ -816,16 +816,838 @@\n ra)%7D%5D%22%0A%0A\n+    def call(self, index: int):%0A        # call next waiting person to counter index%0A        if index %3C 0 or index %3E= self.num_counters:%0A            return 'fail: caixa inexistente'%0A        if not self.waiting:%0A            return 'fail: sem clientes'%0A        if self.counters%5Bindex%5D is not None:%0A            return 'fail: caixa ocupado'%0A        # move first waiting to counter%0A        person = self.waiting.pop(0)%0A        self.counters%5Bindex%5D = person%0A        return None%0A%0A    def finish(self, index: int):%0A        # finish service at counter index%0A        if index %3C 0 or index %3E= self.num_counters:%0A            return 'fail: caixa inexistente'%0A        if self.counters%5Bindex%5D is None:%0A            return 'fail: caixa vazio'%0A        person = self.counters%5Bindex%5D%0A        self.counters%5Bindex%5D = None%0A        return person%0A%0A\n %0Adef mai\n",
+            "lines": "93"
+        },
+        {
+            "label": "2025-11-10_19-54-15",
+            "content": "@@ -820,830 +820,8 @@\n %5D%22%0A%0A\n-    def call(self, index: int):%0A        # call next waiting person to counter index%0A        if index %3C 0 or index %3E= self.num_counters:%0A            return 'fail: caixa inexistente'%0A        if not self.waiting:%0A            return 'fail: sem clientes'%0A        if self.counters%5Bindex%5D is not None:%0A            return 'fail: caixa ocupado'%0A        # move first waiting to counter%0A        person = self.waiting.pop(0)%0A        self.counters%5Bindex%5D = person%0A        return None%0A%0A    def finish(self, index: int):%0A        # finish service at counter index%0A        if index %3C 0 or index %3E= self.num_counters:%0A            return 'fail: caixa inexistente'%0A        if self.counters%5Bindex%5D is None:%0A            return 'fail: caixa vazio'%0A        person = self.counters%5Bindex%5D%0A        self.counters%5Bindex%5D = None%0A        return person%0A%0A\n %0Adef\n@@ -1930,876 +1930,8 @@\n on)%0A\n-        elif cmd == 'call':%0A            if market is None:%0A                print('fail: mercado nao inicializado')%0A            else:%0A                if len(parts) %3C 2 or not parts%5B1%5D.isdigit():%0A                    print('fail: caixa inexistente')%0A                else:%0A                    idx = int(parts%5B1%5D)%0A                    res = market.call(idx)%0A                    if isinstance(res, str):%0A                        print(res)%0A        elif cmd == 'finish':%0A            if market is None:%0A                print('fail: mercado nao inicializado')%0A            else:%0A                if len(parts) %3C 2 or not parts%5B1%5D.isdigit():%0A                    print('fail: caixa inexistente')%0A                else:%0A                    idx = int(parts%5B1%5D)%0A                    res = market.finish(idx)%0A                    if isinstance(res, str):%0A                        print(res)%0A\n     \n@@ -1983,16 +1983,44 @@\n  for now\n+ (not needed for first test)\n %0A       \n@@ -2073,8 +2073,34 @@\n  main()%0A\n+%0Adef __init__():%0A    pass%0A\n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-11-10_19-55-31",
+            "content": "@@ -3735,9 +3735,8 @@\n  main()%0A\n-%0A\n",
+            "lines": "112"
+        },
+        {
+            "label": "2025-11-10_19-56-46",
+            "content": "class Person:\n    def __init__(self, name: str):\n        self.name = name\n\n    def __str__(self) -> str:\n        return self.name\n\nclass Market:\n    def __init__(self, num_counters: int = 0):\n        self.num_counters = num_counters\n        # counters: list of Person or None\n        self.counters = [None for _ in range(num_counters)]\n        # waiting queue: list of Person\n        self.waiting = []\n        # keep legacy fields if needed later\n        self.customers = {}\n        self.total_revenue = 0.0\n\n    def __str__(self) -> str:\n        # Represent counters: '-----' if None, otherwise person's name\n        caixas = [ (c.name if c is not None else '-----') for c in self.counters ]\n        espera = [ p.name for p in self.waiting ]\n        return f\"Caixas: [{', '.join(caixas)}]\\nEspera: [{', '.join(espera)}]\"\n\n    def call(self, index: int):\n        # call next waiting person to counter index\n        if index < 0 or index >= self.num_counters:\n            return 'fail: caixa inexistente'\n        if not self.waiting:\n            return 'fail: sem clientes'\n        if self.counters[index] is not None:\n            return 'fail: caixa ocupado'\n        # move first waiting to counter\n        person = self.waiting.pop(0)\n        self.counters[index] = person\n        return None\n\n    def finish(self, index: int):\n        # finish service at counter index\n        if index < 0 or index >= self.num_counters:\n            return 'fail: caixa inexistente'\n        if self.counters[index] is None:\n            return 'fail: caixa vazio'\n        person = self.counters[index]\n        self.counters[index] = None\n        return person\n\n\ndef main():\n    import sys\n    market = None\n    for line in sys.stdin:\n        line = line.strip()\n        if not line:\n            continue\n        # echo command with $\n        print(f\"${line}\")\n        parts = line.split()\n        cmd = parts[0]\n        if cmd == 'end':\n            break\n        if cmd == 'init':\n            # minimal: create market with given number of counters\n            if len(parts) >= 2 and parts[1].isdigit():\n                n = int(parts[1])\n                market = Market(n)\n            else:\n                print('fail: argumento invalido')\n        elif cmd == 'show':\n            if market is None:\n                print('fail: mercado nao inicializado')\n            else:\n                print(market)\n        elif cmd == 'arrive':\n            if market is None:\n                print('fail: mercado nao inicializado')\n            else:\n                if len(parts) < 2:\n                    print('fail: nome ausente')\n                else:\n                    name = parts[1]\n                    person = Person(name)\n                    market.waiting.append(person)\n        elif cmd == 'call':\n            if market is None:\n                print('fail: mercado nao inicializado')\n            else:\n                if len(parts) < 2 or not parts[1].isdigit():\n                    print('fail: caixa inexistente')\n                else:\n                    idx = int(parts[1])\n                    res = market.call(idx)\n                    if isinstance(res, str):\n                        print(res)\n        elif cmd == 'finish':\n            if market is None:\n                print('fail: mercado nao inicializado')\n            else:\n                if len(parts) < 2 or not parts[1].isdigit():\n                    print('fail: caixa inexistente')\n                else:\n                    idx = int(parts[1])\n                    res = market.finish(idx)\n                    if isinstance(res, str):\n                        print(res)\n        else:\n            # ignore other commands for now\n            continue\n\n\nif __name__ == '__main__':\n    main()\n\n",
+            "lines": "113"
         }
     ]
 }
