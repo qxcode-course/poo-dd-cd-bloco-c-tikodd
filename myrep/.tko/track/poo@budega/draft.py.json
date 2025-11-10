@@ -32,8 +32,48 @@
         },
         {
             "label": "2025-11-09_02-28-57",
-            "content": "class Person:\n    self __init__(self, name: str):\n        self.name = Name\n    \n    def__str__(self) -> str:\n        return self.name\n\nclass Market:\n    def __init__(self, num_counters: int = 0):\n        self.num_counters = num_counters\n        self.customers = {}\n        self.total_revenue = 0.0\n        def add_customer(self, customer: Person):\n            self.customers[customer.name] = customer\n            def remove_customeer(self, customer_name: str):\n                if customer_name in self.customers:\n                    self.customers.pop(customer_name)\n                    def record_sale(self, amount: float):\n                        self.total_revenue += amount\n                        def get_total_revenue(Self) -> float:\n                            return self.total_revenue\n                        class superMarket(Market):\n                            def __init__(self, num_counters: int = 0, loyalty_program: bool = False):\n                                super().__init__(num_counters)\n                                self.loyalty_program = loyalty_program\n                                def enroll_loyalty_member(self, customer: Person):\n                                    if self.loyalty_program:\n                              ",
+            "content": "@@ -458,20 +458,798 @@\n r):%0A                \n+if customer_name in self.customers:%0A                    self.customers.pop(customer_name)%0A                    def record_sale(self, amount: float):%0A                        self.total_revenue += amount%0A                        def get_total_revenue(Self) -%3E float:%0A                            return self.total_revenue%0A                        class superMarket(Market):%0A                            def __init__(self, num_counters: int = 0, loyalty_program: bool = False):%0A                                super().__init__(num_counters)%0A                                self.loyalty_program = loyalty_program%0A                                def enroll_loyalty_member(self, customer: Person):%0A                                    if self.loyalty_program:%0A                              \n",
             "lines": "28"
+        },
+        {
+            "label": "2025-11-10_16-47-23",
+            "content": "@@ -474,309 +474,4 @@\n     \n-if customer name in self.customers:%0A                    del self.customers%5Bcustomer_name%5D%0A%0A                def process sale(self, customer_name: str, amount: float):%0A                    if customer name in self.cutomers:%0A                self.total_revenue += amount%0A%0A%0A%0A                hhg%0A                \n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-11-10_16-53-13",
+            "content": "@@ -290,12 +290,493 @@\n ue = 0.0%0A   \n+     def add_customer(self, customer: Person):%0A            self.customers%5Bcustomer.name%5D = customer%0A            def remove_customeer(self, customer_name: str):%0A                if customer name in self.customers:%0A                    del self.customers%5Bcustomer_name%5D%0A%0A                def process sale(self, customer_name: str, amount: float):%0A                    if customer name in self.cutomers:%0A                self.total_revenue += amount%0A%0A%0A%0A                hhg%0A                \n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-11-10_17-20-38",
+            "content": "@@ -7,26 +7,27 @@\n Person:%0A    \n-de\n+sel\n f __init__(s\n@@ -67,21 +67,25 @@\n e = \n-n\n+N\n ame%0A\n+    \n %0A    def\n  __s\n@@ -80,17 +80,16 @@\n %0A    def\n- \n __str__(\n",
+            "lines": "13"
+        },
+        {
+            "label": "2025-11-10_17-24-10",
+            "content": "@@ -238,588 +238,60 @@\n     \n-# counters: list of Person or None%0A        self.counters = %5BNone for _ in range(num_counters)%5D%0A        # waiting queue: list of Person%0A        self.waiting = %5B%5D%0A        # keep legacy fields if needed later%0A        self.customers = %7B%7D%0A        self.total_revenue = 0.0%0A%0A    def __str__(self) -%3E str:%0A        # Represent counters: '-----' if None, otherwise person's name%0A        caixas = %5B (c.name if c is not None else '-----') for c in self.counters %5D%0A        espera = %5B p.name for p in self.waiting %5D%0A        return f%22Caixas: %5B%7B', '.join(caixas)%7D%5D%5CnEspera: %5B%7B', '.join(espera)%7D%5D%22\n+self.customers = %7B%7D%0A        self.total_revenue = 0.0\n %0A   \n",
+            "lines": "13"
+        },
+        {
+            "label": "2025-11-10_17-24-44",
+            "content": "@@ -819,841 +819,7 @@\n %7D%5D%22%0A\n-%0A%0Adef main():%0A    import sys%0A    market = None%0A    for line in sys.stdin:%0A        line = line.strip()%0A        if not line:%0A            continue%0A        parts = line.split()%0A        cmd = parts%5B0%5D%0A        if cmd == 'end':%0A            break%0A        if cmd == 'init':%0A            # minimal: create market with given number of counters%0A            if len(parts) %3E= 2 and parts%5B1%5D.isdigit():%0A                n = int(parts%5B1%5D)%0A                market = Market(n)%0A            else:%0A                print('fail: argumento invalido')%0A        elif cmd == 'show':%0A            if market is None:%0A                print('fail: mercado nao inicializado')%0A            else:%0A                print(market)%0A        else:%0A            # ignore other commands for now (not needed for first test)%0A            continue%0A%0A%0Aif __name__ == '__main__':%0A    main()%0A\n    \n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-11-10_17-27-48",
+            "content": "@@ -963,64 +963,8 @@\n nue%0A\n-        # echo command with $%0A        print(f%22$%7Bline%7D%22)%0A\n     \n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-10_17-28-44",
+            "content": "@@ -1562,376 +1562,8 @@\n et)%0A\n-        elif cmd == 'arrive':%0A            if market is None:%0A                print('fail: mercado nao inicializado')%0A            else:%0A                if len(parts) %3C 2:%0A                    print('fail: nome ausente')%0A                else:%0A                    name = parts%5B1%5D%0A                    person = Person(name)%0A                    market.waiting.append(person)%0A\n     \n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-11-10_17-29-35",
+            "content": "class Person:\n    def __init__(self, name: str):\n        self.name = name\n\n    def __str__(self) -> str:\n        return self.name\n\nclass Market:\n    def __init__(self, num_counters: int = 0):\n        self.num_counters = num_counters\n        # counters: list of Person or None\n        self.counters = [None for _ in range(num_counters)]\n        # waiting queue: list of Person\n        self.waiting = []\n        # keep legacy fields if needed later\n        self.customers = {}\n        self.total_revenue = 0.0\n\n    def __str__(self) -> str:\n        # Represent counters: '-----' if None, otherwise person's name\n        caixas = [ (c.name if c is not None else '-----') for c in self.counters ]\n        espera = [ p.name for p in self.waiting ]\n        return f\"Caixas: [{', '.join(caixas)}]\\nEspera: [{', '.join(espera)}]\"\n\n\ndef main():\n    import sys\n    market = None\n    for line in sys.stdin:\n        line = line.strip()\n        if not line:\n            continue\n        # echo command with $\n        print(f\"${line}\")\n        parts = line.split()\n        cmd = parts[0]\n        if cmd == 'end':\n            break\n        if cmd == 'init':\n            # minimal: create market with given number of counters\n            if len(parts) >= 2 and parts[1].isdigit():\n                n = int(parts[1])\n                market = Market(n)\n            else:\n                print('fail: argumento invalido')\n        elif cmd == 'show':\n            if market is None:\n                print('fail: mercado nao inicializado')\n            else:\n                print(market)\n        elif cmd == 'arrive':\n            if market is None:\n                print('fail: mercado nao inicializado')\n            else:\n                if len(parts) < 2:\n                    print('fail: nome ausente')\n                else:\n                    name = parts[1]\n                    person = Person(name)\n                    market.waiting.append(person)\n        else:\n            # ignore other commands for now (not needed for first test)\n            continue\n\n\nif __name__ == '__main__':\n    main()\n   ",
+            "lines": "68"
         }
     ]
 }
