@@ -1,0 +1,169 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-11_15-48-17",
+            "content": "@@ -1,223 +1 @@\n-import random%0A%0Anumeros = %5B%5D%0A%0AClass Foo:%0A    def __init__(self, nome, valor):%0A        self.nome = nome%0A        self.valor = valor%0A    %0A    def __repr__(self):%0A        return f%22Foo(nome=%7Bself.nome%7D, valor=%7Bself..valor%7D)%22%0A    \n+%0A\n",
+            "lines": "1"
+        },
+        {
+            "label": "2025-11-11_16-11-33",
+            "content": "@@ -215,127 +215,8 @@\n r%7D)%22\n-%0A%0Aobejetos %5B%5D%0A%0Aprint(%22Array de inteiros vazio:%22, numeros)%0Aprint(%22Array de obejtos vazio:%22, obejetos)%0Aprint(%22-%22 * 60)%0A%0A%0A\n %0A   \n",
+            "lines": "12"
+        },
+        {
+            "label": "2025-11-11_16-17-32",
+            "content": "@@ -226,13 +226,117 @@\n tos %5B%5D%0A%0A\n+print(%22Array de inteiros vazio:%22, numeros)%0Aprint(%22Array de obejtos vazio:%22, obejetos)%0Aprint(%22-%22 * 60)%0A%0A%0A\n %0A    \n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-11-11_16-25-32",
+            "content": "@@ -1,8 +1,28 @@\n+@@ -1,230 +1,47 @@%0A-\n import r\n@@ -26,18 +26,22 @@\n t random\n-%0A%0A\n+%250A%250A\n numeros \n@@ -42,20 +42,28 @@\n meros = \n-%5B%5D%0A%0A\n+%255B%255D%250A%250A\n Class Fo\n@@ -64,17 +64,19 @@\n ass Foo:\n-%0A\n+%250A\n     def \n@@ -103,17 +103,19 @@\n  valor):\n-%0A\n+%250A\n         \n@@ -130,17 +130,19 @@\n e = nome\n-%0A\n+%250A\n         \n@@ -163,14 +163,18 @@\n alor\n-%0A\n+%250A\n     \n-%0A\n+%250A\n     \n@@ -192,17 +192,19 @@\n _(self):\n-%0A\n+%250A\n         \n@@ -211,17 +211,19 @@\n return f\n-%22\n+%2522\n Foo(nome\n@@ -223,17 +223,19 @@\n oo(nome=\n-%7B\n+%257B\n self.nom\n@@ -239,17 +239,19 @@\n nome\n-%7D\n+%257D\n , valor=\n %7Bsel\n@@ -250,9 +250,11 @@\n lor=\n-%7B\n+%257B\n self\n@@ -264,69 +264,202 @@\n alor\n-%7D)%22%0Aprint(%22Array de inteiros vazio:%22, numeros)%0Aobejetos %5B%5D%0A%0A%0A    \n+%257D)%2522%250A%0A+@@ -216,50 +216,8 @@%250A %25257D)%252522%25250A%250A-%0A print(%0A-%2522%0A+%252522%0A Arra%0A@@ -64,9 +64,11 @@%0A zio:%0A-%2522%0A+%252522%0A , nu%0A@@ -78,22 +78,12 @@%0A os)%250A%0A-obejetos %255B%255D%250A%250A%250A    %0A+ %25250Aobe%250A%0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-11-11_16-26-03",
+            "content": "@@ -1,278 +1,39 @@\n-import random%0A%0Anumeros = %5B%5D%0A%0AClass Foo:%0A    def __init__(self, nome, valor):%0A        self.nome = nome%0A        self.valor = valor%0A    %0A    def __repr__(self):%0A        return f%22Foo(nome=%7Bself.nome%7D, valor=%7Bself..valor%7D)%22%0Aprint(%22Array de inteiros vazio:%22, numeros)%0Aobejetos %5B%5D%0A\n+@@ -271,224 +271,8 @@%0A  %255B%255D%250A%0A-\n arra\n@@ -51,17 +51,19 @@\n ay array\n-%0A\n+%250A\n for i in\n@@ -72,17 +72,19 @@\n ange(5):\n-%0A\n+%250A\n     nume\n@@ -110,17 +110,19 @@\n (1, 100)\n-%0A\n+%250A\n     nuum\n@@ -140,17 +140,19 @@\n (numero)\n-%0A\n+%250A\n     obje\n@@ -170,17 +170,19 @@\n me f\n-%22\n+%2522\n Obejeto \n %7Bi+1\n@@ -181,16 +181,24 @@\n eto \n-%7Bi+1%7D%22)%0A\n+%257Bi+1%257D%2522)%250A\n     \n@@ -221,17 +221,19 @@\n obejeto)\n-%0A\n+%250A\n     valo\n@@ -267,11 +267,18 @@\n 0,0)\n-%0A%0A%0A  \n+%250A%0A %250A%250A\n   \n+%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-11-11_16-41-52",
+            "content": "@@ -116,14 +116,381 @@\n valor = \n+valor%0A    %0A    def __repr__(self):%0A        return f%22Foo(nome=%7Bself.nome%7D, valor=%7Bself..valor%7D)%22%0Aprint(%22Array de inteiros vazio:%22, numeros)%0Aobejetos %5B%5D%0Aarray array array array%0Afor i in range(5):%0A    numero = random.randint(1, 100)%0A    nuumeros.append(numero)%0A    objeto = Foo(nome f%22Obejeto %7Bi+1%7D%22)%0A    obejetos.append(obejeto)%0A    valor = random.uniform(10.0, 100,0)%0A\n %0A%0A    \n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-11-11_16-42-29",
+            "content": "@@ -114,14 +114,16 @@\n f.valor \n+= \n %0A%0A    \n",
+            "lines": "10"
+        },
+        {
+            "label": "2025-11-11_16-42-47",
+            "content": "@@ -118,433 +118,8 @@\n lor \n-= valor%0A%0A    for i in range(10)%0A        numero = random.randint(1, 100)%0A        numeros.append(numero)%0A        foo_instance = Foo(f%22Item (i+in)%22)%0A        foo_instance = Fool(f%22Item %7Bi+1%7D%22, numero)%0A        print(f%22Nome: %7Bfoo_instance.nome%7D, Valor: %7Bfoo instance.valor%7D%22)%0A%0A        foo_instance.valor *= 2%0A        print(f%22Nome: %7Bfoo_instance.nome%7D, Novo Valor:%22)%0A        print(f%22Nome: %7Bfoo_instance.nome%7D, Novo Valor:%22)%0A        \n %0A%0A  \n",
+            "lines": "10"
+        },
+        {
+            "label": "2025-11-11_16-51-38",
+            "content": "@@ -1,345 +1,51 @@\n-import random%0A%0Anumeros = %5B%5D%0A%0AClass Foo:%0A    def __init__(self, nome, valor):%0A        self.nome = nome%0A        self.valor = valor%0A%0A    for i in range(10)%0A        numero = random.randint(1, 100)%0A        numeros.append(numero)%0A        foo_instance = Foo(f%22Item (i+in)%22)%0A        foo_instance = Fool(f%22Item %7Bi+1%7D%22, numero)\n+@@ -543,57 +543,8 @@\n %0A     \n-   \n+%0A-\n print(f\n-%22\n+%2522\n Nome: \n-%7B\n+%257B\n foo_\n@@ -61,42 +61,38 @@\n nome\n-%7D, Valor: %7Bfoo instance.valor%7D%22)%0A%0A    \n+%257D, Novo Valor:%2522)%250A%0A %250A%250A  %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-11-11_16-53-02",
+            "content": "@@ -93,13 +93,304 @@\n me = nom\n+e%0A        self.valor = valor%0A%0A    for i in range(10)%0A        numero = random.randint(1, 100)%0A        numeros.append(numero)%0A        foo_instance = Foo(f%22Item (i+in)%22)%0A        foo_instance = Fool(f%22Item %7Bi+1%7D%22, numero)%0A        print(f%22Nome: %7Bfoo_instance.nome%7D, Valor: %7Bfoo instance.valor%7D%22)%0A\n %0A    \n",
+            "lines": "17"
+        },
+        {
+            "label": "2025-11-11_16-53-25",
+            "content": "@@ -0,0 +1,105 @@\n+import random%0A%0Anumeros = %5B%5D%0A%0AClass Foo:%0A    def __init__(self, nome, valor):%0A        self.nome = nom%0A    \n",
+            "lines": "8"
+        },
+        {
+            "label": "2025-11-11_16-53-43",
+            "content": "@@ -1,101 +0,0 @@\n-print(%22Array de inteiros vazio:%22, numeros)%0Aprint(%22Array de objetos vazio:%22, objetos)%0Aprint(%22-%22 * 60)%0A\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-11-11_16-54-34",
+            "content": "@@ -98,187 +98,4 @@\n 60)%0A\n-%0Aimport random%0A%0A# =============================================%0A# 1. Criar um array vazio de inteiros e de objetos%0A# =============================================%0A%0A# Array de inteiros\n",
+            "lines": "3"
+        },
+        {
+            "label": "2025-11-11_16-55-23",
+            "content": "@@ -281,162 +281,4 @@\n iros\n-%0Anumeros = %5B%5D%0A%0A# Classe de exemplo (para array de objetos)%0Aclass Foo:%0A    def __init__(self, nome, valor):%0A        self.nome = nome%0A        self.valor = valor\n",
+            "lines": "11"
+        },
+        {
+            "label": "2025-11-11_16-58-06",
+            "content": "@@ -439,122 +439,4 @@\n alor\n-%0A%0A    def __repr__(self):%0A        return f%22Foo(nome=%7Bself.nome%7D, valor=%7Bself.valor%7D)%22%0A%0A# Array de objetos%0Aobjetos = %5B%5D\n",
+            "lines": "18"
+        },
+        {
+            "label": "2025-11-11_17-02-58",
+            "content": "@@ -557,107 +557,4 @@\n = %5B%5D\n-%0A%0Aprint(%22Array de inteiros vazio:%22, numeros)%0Aprint(%22Array de objetos vazio:%22, objetos)%0Aprint(%22-%22 * 60)%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-11-11_17-03-05",
+            "content": "@@ -660,33 +660,4 @@\n 60)%0A\n-%0Anumeros = %5B1, 2, 3, 4, 5%5D%0A%0A%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-11-11_17-05-07",
+            "content": "@@ -687,58 +687,6 @@\n  5%5D%0A\n-objetos = %5BFoo(%22A%22, 10), Foo(%22B%22, 20), Foo(%22C%22, 30)%5D\n %0A%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-11-11_17-05-32",
+            "content": "@@ -741,53 +741,4 @@\n )%5D%0A%0A\n-print(%22Array de inteiros preenchido:%22, numeros)%0A%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-11-11_17-05-55",
+            "content": "@@ -1,803 +1,44 @@\n-print(%22Array de inteiros vazio:%22, numeros)%0Aprint(%22Array de objetos vazio:%22, objetos)%0Aprint(%22-%22 * 60)%0A%0Aimport random%0A%0A# =============================================%0A# 1. Criar um array vazio de inteiros e de objetos%0A# =============================================%0A%0A# Array de inteiros%0Anumeros = %5B%5D%0A%0A# Classe de exemplo (para array de objetos)%0Aclass Foo:%0A    def __init__(self, nome, valor):%0A        self.nome = nome%0A        self.valor = valor%0A%0A    def __repr__(self):%0A        return f%22Foo(nome=%7Bself.nome%7D, valor=%7Bself.valor%7D)%22%0A%0A# Array de objetos%0Aobjetos = %5B%5D%0A%0Aprint(%22Array de inteiros vazio:%22, numeros)%0Aprint(%22Array de objetos vazio:%22, objetos)%0Aprint(%22-%22 * 60)%0A%0Anumeros = %5B1, 2, 3, 4, 5%5D%0Aobjetos = %5BFoo(%22A%22, 10), Foo(%22B%22, 20), Foo(%22C%22, 30)%5D%0A%0Aprint(%22Array de inteiros preenchido:%22, numeros)%0Aprint(%22\n+@@ -788,53 +788,6 @@%0A ros)%0A-%250Aprint(%2522\n Arra\n@@ -65,9 +65,11 @@\n ido:\n-%22\n+%2522\n , ob\n@@ -75,9 +75,16 @@\n bjetos)%0A\n+ %250A%250A\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-11-11_17-08-57",
+            "content": "@@ -836,76 +836,5 @@\n os)%0A\n-print(%22-%22 * 60)%0A%0Aprint(%22Tamanho do array de inteiros:%22, len(numeros))%0A%0A\n %0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-11-11_17-09-29",
+            "content": "@@ -906,58 +906,6 @@\n s))%0A\n-print(%22Tamanho do array de objetos:%22, len(objetos))%0A\n %0A%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-11-11_17-09-40",
+            "content": "@@ -954,27 +954,10 @@\n jetos))%0A\n-print(%22-%22 * 60)%0A%0A\n %0A%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-11_17-10-27",
+            "content": "@@ -975,69 +975,6 @@\n 0)%0A%0A\n-numeros.append(6)%0Aprint(%22Ap%C3%B3s adicionar 6 ao final:%22, numeros)%0A\n %0A%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-11_17-13-44",
+            "content": "@@ -1,1046 +1,38 @@\n-print(%22Array de inteiros vazio:%22, numeros)%0Aprint(%22Array de objetos vazio:%22, objetos)%0Aprint(%22-%22 * 60)%0A%0Aimport random%0A%0A# =============================================%0A# 1. Criar um array vazio de inteiros e de objetos%0A# =============================================%0A%0A# Array de inteiros%0Anumeros = %5B%5D%0A%0A# Classe de exemplo (para array de objetos)%0Aclass Foo:%0A    def __init__(self, nome, valor):%0A        self.nome = nome%0A        self.valor = valor%0A%0A    def __repr__(self):%0A        return f%22Foo(nome=%7Bself.nome%7D, valor=%7Bself.valor%7D)%22%0A%0A# Array de objetos%0Aobjetos = %5B%5D%0A%0Aprint(%22Array de inteiros vazio:%22, numeros)%0Aprint(%22Array de objetos vazio:%22, objetos)%0Aprint(%22-%22 * 60)%0A%0Anumeros = %5B1, 2, 3, 4, 5%5D%0Aobjetos = %5BFoo(%22A%22, 10), Foo(%22B%22, 20), Foo(%22C%22, 30)%5D%0A%0Aprint(%22Array de inteiros preenchido:%22, numeros)%0Aprint(%22Array de objetos preenchido:%22, objetos)%0Aprint(%22-%22 * 60)%0A%0Aprint(%22Tamanho do array de inteiros:%22, len(numeros))%0Aprint(%22Tamanho do array de objetos:%22, len(objetos))%0Aprint(%22-%22 * 60)%0A%0Anumeros.append(6)%0Aprint(%22Ap%C3%B3s adicionar 6 ao final:%22, numeros)%0A%0A\n+@@ -1039,89 +1039,5 @@%0A s)%250A%250A%0A-\n ulti\n@@ -53,17 +53,21 @@\n op()\n-%0A\n+%250A\n print(f\n-%22\n+%2522\n Remo\n@@ -77,9 +77,14 @@\n o o \n-%C3%BA\n+%25C3%25BA\n ltim\n@@ -99,19 +99,25 @@\n to (\n-%7B\n+%257B\n ultimo\n-%7D):%22\n+%257D):%2522\n , nu\n@@ -122,13 +122,26 @@\n numeros)\n-%0A%0A%0A%0A\n+%250A%250A%250A%250A%0A %250A\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-11-11_17-15-56",
+            "content": "@@ -1,1144 +1,61 @@\n-print(%22Array de inteiros vazio:%22, numeros)%0Aprint(%22Array de objetos vazio:%22, objetos)%0Aprint(%22-%22 * 60)%0A%0Aimport random%0A%0A# =============================================%0A# 1. Criar um array vazio de inteiros e de objetos%0A# =============================================%0A%0A# Array de inteiros%0Anumeros = %5B%5D%0A%0A# Classe de exemplo (para array de objetos)%0Aclass Foo:%0A    def __init__(self, nome, valor):%0A        self.nome = nome%0A        self.valor = valor%0A%0A    def __repr__(self):%0A        return f%22Foo(nome=%7Bself.nome%7D, valor=%7Bself.valor%7D)%22%0A%0A# Array de objetos%0Aobjetos = %5B%5D%0A%0Aprint(%22Array de inteiros vazio:%22, numeros)%0Aprint(%22Array de objetos vazio:%22, objetos)%0Aprint(%22-%22 * 60)%0A%0Anumeros = %5B1, 2, 3, 4, 5%5D%0Aobjetos = %5BFoo(%22A%22, 10), Foo(%22B%22, 20), Foo(%22C%22, 30)%5D%0A%0Aprint(%22Array de inteiros preenchido:%22, numeros)%0Aprint(%22Array de objetos preenchido:%22, objetos)%0Aprint(%22-%22 * 60)%0A%0Aprint(%22Tamanho do array de inteiros:%22, len(numeros))%0Aprint(%22Tamanho do array de objetos:%22, len(objetos))%0Aprint(%22-%22 * 60)%0A%0Anumeros.append(6)%0Aprint(%22Ap%C3%B3s adicionar 6 ao final:%22, numeros)%0A%0Aultimo = numeros.pop()%0Aprint(f%22Removido o %C3%BAltimo elemento (%7Bultimo%7D):%22, numeros)%0Aprint(%22-%22 * 60)%0A%0A\n+@@ -1120,95 +1120,8 @@%0A os)%250A%0A-print(%2522-%2522 * 60)%250A%250A\n nume\n@@ -76,19 +76,28 @@\n 100)\n-%0A\n+%250A\n print(\n-%22Ap%C3%B3\n+%2522Ap%25C3%25B3\n s ad\n@@ -117,14 +117,21 @@\n o in\n-%C3%AD\n+%25C3%25AD\n cio:\n-%22\n+%2522\n , nu\n@@ -137,11 +137,22 @@\n umeros)%0A\n-%0A%0A\n+ %250A%250A%250A%250A\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-11-11_17-16-10",
+            "content": "@@ -1209,111 +1209,6 @@\n s)%0A%0A\n-primeiro = numeros.pop(0)%0Aprint(f%22Removido o primeiro elemento (%7Bprimeiro%7D):%22, numeros)%0Aprint(%22-%22 * 60)%0A%0A\n %0A%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-11-11_17-18-53",
+            "content": "@@ -1314,184 +1314,6 @@\n 0)%0A%0A\n-numeros.insert(0, 100)%0Aprint(%22Ap%C3%B3s adicionar 100 no in%C3%ADcio:%22, numeros)%0A%0Aprimeiro = numeros.pop(0)%0Aprint(f%22Removido o primeiro elemento (%7Bprimeiro%7D):%22, numeros)%0Aprint(%22-%22 * 60)%0A%0A%0A\n %0A%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-11_17-23-47",
+            "content": "@@ -1407,12 +1407,91 @@\n s.pop(0)\n-%5D\n+%0Aprint(f%22Removido o primeiro elemento (%7Bprimeiro%7D):%22, numeros)%0Aprint(%22-%22 * 60)%0A%0A\n %0A%0A%0A\n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-11_17-24-18",
+            "content": "@@ -1289,28 +1289,130 @@\n %22, numeros)%0Aprint(%22-%22 * 60)%0A\n+%0Anumeros.insert(0, 100)%0Aprint(%22Ap%C3%B3s adicionar 100 no in%C3%ADcio:%22, numeros)%0A%0Aprimeiro = numeros.pop(0)%5D%0A%0A%0A\n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-11-11_17-24-44",
+            "content": "@@ -1230,8 +1230,87 @@\n s.pop(0)\n+%0Aprint(f%22Removido o primeiro elemento (%7Bprimeiro%7D):%22, numeros)%0Aprint(%22-%22 * 60)%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-11-11_17-25-06",
+            "content": "@@ -1191,20 +1191,47 @@\n o in%C3%ADcio:%22, numeros)\n+%0A%0Aprimeiro = numeros.pop(0)\n",
+            "lines": "51"
+        },
+        {
+            "label": "2025-11-11_17-34-55",
+            "content": "print(\"Array de inteiros vazio:\", numeros)\nprint(\"Array de objetos vazio:\", objetos)\nprint(\"-\" * 60)\n\nimport random\n\n# =============================================\n# 1. Criar um array vazio de inteiros e de objetos\n# =============================================\n\n# Array de inteiros\nnumeros = []\n\n# Classe de exemplo (para array de objetos)\nclass Foo:\n    def __init__(self, nome, valor):\n        self.nome = nome\n        self.valor = valor\n\n    def __repr__(self):\n        return f\"Foo(nome={self.nome}, valor={self.valor})\"\n\n# Array de objetos\nobjetos = []\n\nprint(\"Array de inteiros vazio:\", numeros)\nprint(\"Array de objetos vazio:\", objetos)\nprint(\"-\" * 60)\n\nnumeros = [1, 2, 3, 4, 5]\nobjetos = [Foo(\"A\", 10), Foo(\"B\", 20), Foo(\"C\", 30)]\n\nprint(\"Array de inteiros preenchido:\", numeros)\nprint(\"Array de objetos preenchido:\", objetos)\nprint(\"-\" * 60)\n\nprint(\"Tamanho do array de inteiros:\", len(numeros))\nprint(\"Tamanho do array de objetos:\", len(objetos))\nprint(\"-\" * 60)\n\nnumeros.append(6)\nprint(\"Ap\u00f3s adicionar 6 ao final:\", numeros)\n\nultimo = numeros.pop()\nprint(f\"Removido o \u00faltimo elemento ({ultimo}):\", numeros)\nprint(\"-\" * 60)\n\nnumeros.insert(0, 100)\nprint(\"Ap\u00f3s adicionar 100 no in\u00edcio:\", numeros)",
+            "lines": "49"
+        }
+    ]
+}
