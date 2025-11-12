@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-11_22-34-44",
+            "content": "@@ -292,254 +292,43 @@\n %22)%0A%0A\n-from __future__ import annotations%0A%0Afrom dataclasses import dataclass%0Afrom typing import List, optional%0A%0AClass CalibreIncomparativeError(ValueError):%0A    pass%0AClass BicoOcupadoError(RuntimeError):%0A    pass%0A%0AClass SemGrafiteNoBicoError(RunTimeError)%0A%0A\n+        import random%0A        %0A        \n",
+            "lines": "13"
+        },
+        {
+            "label": "2025-11-11_22-40-47",
+            "content": "@@ -1,12 +1,306 @@\n+Class Draft:%0A    def __init__(self, model, color, tip+size):%0A        self.model = model%0A        self.color = color%0A        self.tip_size = tip_size%0A        self.lead = None%0A        print(%22Array de inteiros vazio:%22, numeros)%0A        print(%22Array de obejtos vazio:%22, obejetos)%0A        print(%22-%22)%0A\n %0Afrom __futu\n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-11-11_22-41-02",
+            "content": "@@ -1,12 +1,13 @@\n+%0A\n from __futur\n@@ -201,16 +201,16 @@\n   pass%0A%0A\n+\n Class Se\n@@ -248,268 +248,4 @@\n r)%0A%0A\n-HARDNESS_COMSUMPTION = %7B%0A    %22HB%22: 1,%0A    %222B%22: 2,%0A    %224B%22: 4,%0A    %226B%22: 6,%0A%7D%0A%0AClass Grafite:%0A    def __init__(self, clibre: float, dureza: str, tamanho: float):%0A        self.calibre = calibre%0A        self.dereza = dureza%0A        self.tamanho = tamanho%0A        %0A%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2025-11-11_22-49-50",
+            "content": "@@ -505,19 +505,10 @@\n         \n-%0A        \n %0A%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-11-11_22-52-44",
+            "content": "@@ -418,22 +418,30 @@\n     \n+self.\n calibre\n-: float\n+ = calibre\n %0A   \n@@ -449,179 +449,58 @@\n     \n-du\n+self.de\n re\n-a\n za\n-: str%0A        tamanho_mm: int%0A%0A        def consumir(self, mm: int) -%3E int:%0A            consumido = min (self.tamanho_mm, mm)%0A            self.tamanho_mm -= consumid\n+ = dureza%0A        self.tamanho = tamanh\n o%0A  \n@@ -505,22 +505,16 @@\n         \n-    %0A%0A\n %0A       \n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-11-11_22-58-42",
+            "content": "@@ -626,201 +626,8 @@\n     \n-return consumido%0A        %0A        def _str_(self) -%3E str:%0A            return f%22Grafite(calibre=%7Bself.calibre%7D, dureza=%7Bself.dureza%7D, tamanho_mm=%7Bself.tamanho_mm%7D)%22%0A        %0A%0AClass Lapiseira:%0A%0A%0A\n %0A%0A%0A \n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-11-11_23-04-24",
+            "content": "@@ -817,480 +817,8 @@\n ra:%0A\n-    def __init__(self, calibre: float) -%3E None:%0A    self.bico: Optional%5BGrafite%5D = None%0Aself.tambor: List%5BGrafite%5D = %5B%5D%0A%0A%0Adef inserir_grafite(self, calibre: float, dureza: str, tamanho_mm: int) -%3E None:%0A%22%22%22Insere um grafite no final do tambor.%0ALevanta CalibreIncompativelError se o calibre n%C3%A3o for compat%C3%ADvel.%0A%22%22%22%0Aif abs(float(calibre) - self.calibre) %3E 1e-6:%0Araise CalibreIncompativelError(%0Af%22Calibre do grafite (%7Bcalibre%7D) incompat%C3%ADvel com lapiseira (%7Bself.calibre%7D).%22%0A)\n %0A%0A%0A%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-11_23-17-00",
+            "content": "@@ -1290,303 +1290,8 @@\n %22%0A)%0A\n-if dureza not in HARDNESS_CONSUMPTION:%0Araise ValueError(f%22Dureza desconhecida: %7Bdureza%7D. Op%C3%A7%C3%B5es: %7Blist(HARDNESS_CONSUMPTION.keys())%7D%22)%0Aif tamanho_mm %3C= 0:%0Araise ValueError(%22Tamanho do grafite deve ser positivo em mm.%22)%0Ag = Grafite(float(calibre), dureza, int(tamanho_mm))%0Aself.tambor.append(g)%0A%0A\n %0A%0A%0A%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2025-11-11_23-19-35",
+            "content": "@@ -1585,41 +1585,8 @@\n g)%0A%0A\n-def puxar_grafite(self) -%3E None:%0A\n %0A%0A%0A%0A\n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-11-11_23-22-39",
+            "content": "@@ -1618,146 +1618,8 @@\n ne:%0A\n-    if self.bico is not None:%0Araise BicoOcupadoError(%22J%C3%A1 existe um grafite no bico %E2%80%94 remova-o antes de puxar outro.%22)%0Aif not self.tambor:%0A\n %0A%0A%0A%0A\n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-11-11_23-23-15",
+            "content": "@@ -1756,152 +1756,8 @@\n or:%0A\n-    raise IndexError(%22Tambor vazio: n%C3%A3o h%C3%A1 grafite para puxar.%22)%0Aself.bico = self.tambor.pop()%0A%0Adef remover_grafite(self) -%3E Optional%5BGrafite%5D:%0A\n %0A%0A%0A%0A\n",
+            "lines": "65"
+        },
+        {
+            "label": "2025-11-11_23-26-51",
+            "content": "@@ -1900,300 +1900,9 @@\n e%5D:%0A\n-    return %7B%0A%22sucesso%22: True,%0A%22consumido_mm%22: int(consumido),%0A%22mensagem%22: %22Folha escrita com sucesso.%22,%0A%22grafite_restante_mm%22: int(g.tamanho_mm),%0A%7D%0A%0Areturn %7B%0A%22sucesso%22: True,%0A%22consumido_mm%22: int(consumido),%0A%22mensagem%22: %22Folha escrita com sucesso.%22,%0A%22grafite_restante_mm%22: int(g.tamanho_mm),%0A%7D\n+%0A\n %0A%0A%0A \n",
+            "lines": "69"
+        },
+        {
+            "label": "2025-11-12_00-00-47",
+            "content": "@@ -2195,1164 +2195,8 @@\n %7D%0A%0A%0A\n-def status(self) -%3E str:%0Abico_str = str(self.bico) if self.bico else %22(vazio)%22%0Atambor_str = %22, %22.join(repr(g) for g in self.tambor) if self.tambor else %22(vazio)%22%0Areturn f%22Lapiseira %7Bself.calibre%7Dmm %7C Bico: %7Bbico_str%7D %7C Tambor: %7Btambor_str%7D%22%0A%0A%0Adef __repr__(self) -%3E str:%0Areturn f%22Lapiseira(calibre=%7Bself.calibre%7D, bico=%7Bself.bico%7D, tambor=%7Bself.tambor%7D)%22%0A%0A%0A%0A%0Aif __name__ == %22__main__%22:%0A# Exemplo de uso%0Alap = Lapiseira(0.5)%0Aprint(%22Criada:%22, lap)%0A%0A%0A%0A# Inserindo grafites corretos e um incorreto%0Alap.inserir_grafite(0.5, %22HB%22, 60)%0Alap.inserir_grafite(0.5, %222B%22, 50)%0Alap.inserir_grafite(0.5, %224B%22, 20)%0Aprint(%22Ap%C3%B3s inserir 3 grafites:%22, lap)%0A%0A%0A# Puxar grafite para o bico%0Alap.puxar_grafite()%0Aprint(%22Ap%C3%B3s puxar um grafite (%C3%BAltimo do tambor):%22, lap)%0A%0A%0A# Escrever folhas at%C3%A9 terminar ou ficar incompleto%0Awhile True:%0Atry:%0Ares = lap.escrever_folha()%0Aprint(res)%0Aif not res%5B%22sucesso%22%5D:%0Aprint(%22A escrita ficou incompleta ou grafite insuficiente %E2%80%94 status:%22, lap)%0Abreak%0A# se o grafite foi removido, poderemos puxar outro%0Aif lap.bico is None:%0Aprint(%22Bico vazio %E2%80%94 puxe outro grafite do tambor se houver.%22)%0Abreak%0Aexcept SemGrafiteNoBicoError as e:%0Aprint(%22Erro:%22, e)%0Abreak%0A%0A%0A\n     \n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-11-12_00-54-18",
+            "content": "from __future__ import annotations\n\nfrom dataclasses import dataclass\nfrom typing import List, optional\n\nClass CalibreIncomparativeError(ValueError):\n    pass\nClass BicoOcupadoError(RuntimeError):\n    pass\n\nClass SemGrafiteNoBicoError(RunTimeError)\n\nHARDNESS_COMSUMPTION = {\n    \"HB\": 1,\n    \"2B\": 2,\n    \"4B\": 4,\n    \"6B\": 6,\n}\n\nClass Grafite:\n    def __init__(self, clibre: float, dureza: str, tamanho: float):\n        calibre: float\n        dureaza: str\n        tamanho_mm: int\n\n        def consumir(self, mm: int) -> int:\n            consumido = min (self.tamanho_mm, mm)\n            self.tamanho_mm -= consumido\n            return consumido\n        \n        def _str_(self) -> str:\n            return f\"Grafite(calibre={self.calibre}, dureza={self.dureza}, tamanho_mm={self.tamanho_mm})\"\n        \n\nClass Lapiseira:\n    def __init__(self, calibre: float) -> None:\n    self.bico: Optional[Grafite] = None\nself.tambor: List[Grafite] = []\n\n\ndef inserir_grafite(self, calibre: float, dureza: str, tamanho_mm: int) -> None:\n\"\"\"Insere um grafite no final do tambor.\nLevanta CalibreIncompativelError se o calibre n\u00e3o for compat\u00edvel.\n\"\"\"\nif abs(float(calibre) - self.calibre) > 1e-6:\nraise CalibreIncompativelError(\nf\"Calibre do grafite ({calibre}) incompat\u00edvel com lapiseira ({self.calibre}).\"\n)\nif dureza not in HARDNESS_CONSUMPTION:\nraise ValueError(f\"Dureza desconhecida: {dureza}. Op\u00e7\u00f5es: {list(HARDNESS_CONSUMPTION.keys())}\")\nif tamanho_mm <= 0:\nraise ValueError(\"Tamanho do grafite deve ser positivo em mm.\")\ng = Grafite(float(calibre), dureza, int(tamanho_mm))\nself.tambor.append(g)\n\ndef puxar_grafite(self) -> None:\n    if self.bico is not None:\nraise BicoOcupadoError(\"J\u00e1 existe um grafite no bico \u2014 remova-o antes de puxar outro.\")\nif not self.tambor:\n    raise IndexError(\"Tambor vazio: n\u00e3o h\u00e1 grafite para puxar.\")\nself.bico = self.tambor.pop()\n\ndef remover_grafite(self) -> Optional[Grafite]:\n    return {\n\"sucesso\": True,\n\"consumido_mm\": int(consumido),\n\"mensagem\": \"Folha escrita com sucesso.\",\n\"grafite_restante_mm\": int(g.tamanho_mm),\n}\n\nreturn {\n\"sucesso\": True,\n\"consumido_mm\": int(consumido),\n\"mensagem\": \"Folha escrita com sucesso.\",\n\"grafite_restante_mm\": int(g.tamanho_mm),\n}\n\n\ndef status(self) -> str:\nbico_str = str(self.bico) if self.bico else \"(vazio)\"\ntambor_str = \", \".join(repr(g) for g in self.tambor) if self.tambor else \"(vazio)\"\nreturn f\"Lapiseira {self.calibre}mm | Bico: {bico_str} | Tambor: {tambor_str}\"\n\n\ndef __repr__(self) -> str:\nreturn f\"Lapiseira(calibre={self.calibre}, bico={self.bico}, tambor={self.tambor})\"\n\n\n\n\nif __name__ == \"__main__\":\n# Exemplo de uso\nlap = Lapiseira(0.5)\nprint(\"Criada:\", lap)\n\n\n\n# Inserindo grafites corretos e um incorreto\nlap.inserir_grafite(0.5, \"HB\", 60)\nlap.inserir_grafite(0.5, \"2B\", 50)\nlap.inserir_grafite(0.5, \"4B\", 20)\nprint(\"Ap\u00f3s inserir 3 grafites:\", lap)\n\n\n# Puxar grafite para o bico\nlap.puxar_grafite()\nprint(\"Ap\u00f3s puxar um grafite (\u00faltimo do tambor):\", lap)\n\n\n# Escrever folhas at\u00e9 terminar ou ficar incompleto\nwhile True:\ntry:\nres = lap.escrever_folha()\nprint(res)\nif not res[\"sucesso\"]:\nprint(\"A escrita ficou incompleta ou grafite insuficiente \u2014 status:\", lap)\nbreak\n# se o grafite foi removido, poderemos puxar outro\nif lap.bico is None:\nprint(\"Bico vazio \u2014 puxe outro grafite do tambor se houver.\")\nbreak\nexcept SemGrafiteNoBicoError as e:\nprint(\"Erro:\", e)\nbreak\n\n\n        \n\n",
+            "lines": "128"
+        }
+    ]
+}
